@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h3> Please Enter Your details For Our Dating Website!</h3>
+<form>
+  <fieldset>
+    <legend>Your face</legend>
+    <p> <label for="avatar">Your image:</label> <input type = "file" id="avatar" name="avatar" required id="preview"/></p>
+    <p> Image preview:<img id="avatar"/></p>
+    <!-- how to show the image in the preview section??-->
+  </fieldset>
+
+  <fieldset>
+    <legend>Your General Details</legend>
+      <p>Name:<input type="text" required/></p>
+      <!--how to write the default words??-->
+      <p>Gender: <input type="radio" />Male <input type="radio"/>Female</p>
+      <!--how to connect the value male to the radio section???-->
+      <p>Age: <input type="number" required/></p>
+      <p>Date of birth:<input type="date"/></p>
+      <p>Favorite color:<input type="color"></p>
+      <p>Which country:<input type="option">
+        <!--how to set the selection??-->
+  </fieldset>
+
+  <fieldset>
+    <legend>Your indicators</legend>
+    <p>Height:Short<input type="range" min="0" max="100"/> Tall</p>
+    <p>Salary:Poor<input type="range" min="0" max="100"/> Rich</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Your Contact Information</legend>
+    <p>Email:<iput type="email" required></p>
+      <!--type="email" is wrong???-->
+    <p>Mobile: <input type="tel"></p>
+    <p>Address:<textarea name="name" rows="8" cols="40"></textarea></p>
+    <p>Method to contact you: <input type="checkbox"/>Email<input type="checkbox"/> Whatsapp<input type="checkbox"/> In-app chat </p>
+
+  </fieldset>
+
+  <input type="submit" value="submit">
+</from>
+  </body>
+
+</html>
