@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  fieldset {background:lightyellow;border:10px solid yellow;margin-bottom:10px;width:720px }
+  label { width: 180px}
+
+  .labelText{display:inline-block; text-align:right;text-align:top}
+  .labelCheckboxAndRadio{width: auto}
+  .range{text-align: center}
+  .Bred{background: red}
+  .Bpurple{background: purple}
+  textarea{width:360px;height:50px}
+  </style>
+</head>
+<body>
+
+<h3> Please Enter Your details For Our Dating Website!</h3>
+<form method="get"  action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+<!-- only method = get i can see the detail information server gets.  post enctype="multipart/form-data" -->
+  <fieldset>
+    <legend>Your face</legend>
+    <p> <label for="avatar" class="labelText">Your image:</label> <input type = "file" id="avatar" name="avatar" required id="preview"/></p>
+    <p> <label for="imgpreview" class="labelText">Image preview:</label><img id="imgpreview"/></p>
+    <!-- how to show the image in the preview section??-->
+  </fieldset>
+
+  <fieldset>
+    <legend>Your General Details</legend>
+      <p><label for="cname"  required class="labelText">Name:</label><input id="cname" name="cname" type="text" placeholder="Your full name" /></p>
+      <!--how to write the default words??-> placeholder attribute-->
+
+      <p> <label for="gender" class="labelText">Gender:</label>
+        <input type="radio" name="sex" value="male" id="cmale" class=".labelCheckboxAndRadio"/> <label for="cmale" >Male</label>
+         <input type="radio" name="sex" value="female" id="cfemale" class=".labelCheckboxAndRadio"/> <label for="cfemale" >Female</label> </p>
+      <!--how to connect the value male to the radio section???-->
+      <!--when add the same name="sex", the choose is only one, either male or female-->
+      <!--previous the mouse can't focus is that spell lable is wrong -->
+      <!-- all the value attribute, the server will get the information -->
+      <p><label for="age" class="labelText">Age:</label><input type="number" value="18" id="age" name="age" required/></p>
+      <!--default value is just value attribute-->
+      <p><label for="birth" class="labelText">Date of birth:</label><input type="date" id="birth" name="birthDay"/></p>
+      <p><label for="color" class="labelText">Favorite color:</label><input type="color" id="color" name="colour"></p>
+      <p><label for="country" class="labelText">Which country:
+      </label><select id="country" name="country">
+          <option value="None"></option>
+          <option value="USA">America</option>
+          <option value="china">China</option>
+          <option value="india">India</option>
+          <option value="japan">Japan</option>
+          <option value="korea">Korea</option>
+        </select>
+        <!-- <input type="option"id="country"> -->
+        <!--how to set the selection??-> use <select> and <option>-->
+  </fieldset>
+
+  <fieldset>
+    <legend>Your indicators</legend>
+    <p><label for="height" class="labelText" class="range">Height:</label>  <span class="Bred">Short</span><input id="height" type="range"  min="0" max="100" value="20" name="height"/> <span class="Bpurple">Tall</span></p>
+    <p><label for="salary" class="labelText" class="range">Salary:</label>  <span class="Bred">Poor</span><input type="range" id="salary" min="0" max="100" value="50"name="salary"/> <span class="Bpurple">Rich</span></p>
+    <!-- label is not work for range ?? -->
+  </fieldset>
+
+  <fieldset>
+    <legend>Your Contact Information</legend>
+
+    <p><label for="email" class="labelText">Email:</label><input type="email" required id="email" name="email"/></p>
+      <!--type="email" is wrong??? -> the spell of input is wrong-->
+    <p><label for="mobile" class="labelText">Mobile:</label><input type="tel" id="mobile" name="mobile"></p>
+    <p><label for="address" class="labelText">Address:</label><textarea  rows="4" cols="20" id="address" name="address"></textarea></p>
+    <p><label for="contact" class="labelText">Method to contact you:</label>
+      <input type="checkbox" id="conEmail" name="contactMethod" value="Email" class=".labelCheckboxAndRadio"/><label for="conEmail" name="conEmail">Email</label>
+      <input type="checkbox" id="whatapp" name="contactMethod" value="whatapp"/> <label for="whatapp" name="whatapp" class=".labelCheckboxAndRadio">Whatsapp</label>
+      <input type="checkbox" id="in-app" name="contactMethod" value="in-app chat"/> <label for="in-app" name="in-app" class=".labelCheckboxAndRadio">In-app chat </label></p>
+    <!--Address is at the bottom of the textarea???-->
+    <!-- add name attribute at the input, the information of attribute can be seen in the server end -->
+  </fieldset>
+
+  <!-- <input type="submit" value="submit" enctype="multipart/form-data" method="post" id="submit" name="submit"> -->
+  <input type="submit" value="submit" id="submit" name="submit">
+
+  <!-- How to connect the server to show all the information?? -->
+</from>
+  </body>
+
+</html>
